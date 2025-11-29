@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Analisis Ulasan - Eleganza Dress</title>
+<style>
+  body{
+    background:#1a0826;
+    font-family:Arial, sans-serif;
+    margin:0;
+    padding:20px;
+    color:white;
+  }
+  h1{
+    text-align:center;
+    color:#b46bff;
+  }
+  .card{
+    background:#2f153a;
+    padding:20px;
+    margin:15px auto;
+    border-radius:15px;
+    max-width:900px;
+    box-shadow:0 0 10px rgba(0,0,0,0.4);
+  }
+  .accordion{
+    background:#8a4fff;
+    padding:15px;
+    border-radius:10px;
+    cursor:pointer;
+    margin-top:10px;
+    font-weight:bold;
+  }
+  .panel{
+    display:none;
+    padding:15px;
+    background:#3b1f4d;
+    border-radius:10px;
+    margin-top:5px;
+  }
+</style>
+</head>
+<body>
+<h1>Analisis Ulasan Eleganza Dress</h1>
+
+<div class="card">
+  <h2>Model Machine Learning</h2>
+  <p>Menggunakan model <b>Logistic Regression</b> untuk mengklasifikasikan ulasan menjadi: positif, netral, dan negatif.</p>
+</div>
+
+<div class="card">
+  <h2>Parameter Utama Model</h2>
+  <ul>
+    <li>C = 1.0</li>
+    <li>Max Iter = 200</li>
+    <li>Vectorizer = TF-IDF (max_features=2000)</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h2>Contoh Validasi Logika Prediksi</h2>
+  <div class="accordion">Klik untuk melihat contoh</div>
+  <div class="panel">
+    <p><b>Input:</b> "Dress sangat nyaman dan jahitannya rapi."</p>
+    <p><b>Prediksi:</b> Positif</p>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Kebutuhan Sistem</h2>
+  <div class="accordion">Klik untuk membuka</div>
+  <div class="panel">
+    <p><b>Fungsional:</b></p>
+    <ul>
+      <li>Mengambil input ulasan pelanggan.</li>
+      <li>Memproses teks menggunakan ML.</li>
+      <li>Menampilkan kategori sentimen.</li>
+    </ul>
+    <p><b>Non-Fungsional:</b></p>
+    <ul>
+      <li>Waktu respon cepat (&lt; 1 detik).</li>
+      <li>UI mudah digunakan dan responsif.</li>
+      <li>Hasil akurat & konsisten.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Ulasan Pelanggan</h2>
+
+  <div class="accordion">Ulasan Baju Wisuda</div>
+  <div class="panel">
+    <p>"Warnanya cantik dan bahan adem dipakai." → <b>Positif</b></p>
+    <p>"Lumayan, tapi pengiriman agak lama." → <b>Netral</b></p>
+    <p>"Ukuran tidak sesuai dan bahan terasa panas." → <b>Negatif</b></p>
+  </div>
+
+  <div class="accordion">Ulasan Baju Pernikahan</div>
+  <div class="panel">
+    <p>"Detail bordir elegan dan terlihat mewah." → <b>Positif</b></p>
+    <p>"Bajunya oke, cuma sedikit longgar." → <b>Netral</b></p>
+    <p>"Resleting mudah rusak, tidak sesuai harga." → <b>Negatif</b></p>
+  </div>
+
+  <div class="accordion">Ulasan Baju Berhijab</div>
+  <div class="panel">
+    <p>"Sangat sopan, bahannya jatuh dan nyaman." → <b>Positif</b></p>
+    <p>"Modelnya standar saja." → <b>Netral</b></p>
+    <p>"Bahan kasar dan warnanya berbeda dari foto." → <b>Negatif</b></p>
+  </div>
+</div>
+
+<script>
+  const acc = document.querySelectorAll('.accordion');
+  acc.forEach(a => {
+    a.addEventListener('click', () => {
+      const panel = a.nextElementSibling;
+      panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+</script>
+
+</body>
+</html>
+
+
+
+
